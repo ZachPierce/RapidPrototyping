@@ -1,0 +1,42 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <h1> Andrey Shprengel</h1>
+    <div>
+        <img src="daytona.png" alt="Pulpit rock" width="304" height="228">
+    </div>
+    <div id="para" style=" height:50px; position:absolute" >
+        <p style=" position:relative"> This is some text that will do stuff using JS</p>
+    </div>
+        
+    <script>
+        $(document).ready(function () {
+            $("img").mouseover(function () {
+                $(this).animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '+=150px',
+                    width: '+=150px'
+                }, 1000, "linear", function () { $("img").off(); });
+                
+            });
+            $("p").click(function () {
+                $(this).animate({
+                    fontSize: '3em',
+                    left: '+=100px',
+                    
+                }, 5000, function () {
+                    // Animation complete.
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
